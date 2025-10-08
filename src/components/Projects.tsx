@@ -3,52 +3,36 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Plataforma completa de e-commerce com painel administrativo, carrinho de compras, pagamentos integrados e gestão de estoque em tempo real.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    github: "#",
-    demo: "#"
+    title: "Fokus Alura",
+    description: "Aplicativo web para gerenciamento de tempo e produtividade baseado na técnica Pomodoro.",
+    image: "https://mateus-zdebski.github.io/imagens/Fofusalura.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Mateus-Zdebski/Fokus_alura",
+    demo: "https://github.com/Mateus-Zdebski/Fokus_alura"
   },
   {
-    title: "Task Management App",
-    description: "Aplicação de gerenciamento de tarefas com drag-and-drop, notificações em tempo real, colaboração em equipe e sincronização em nuvem.",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=500&fit=crop",
-    tags: ["TypeScript", "React", "Firebase", "Tailwind"],
-    github: "#",
-    demo: "#"
+    title: "Igreja Ucraniana",
+    description: "Portfólio para a Igreja Ucraniana São Nicolau.",
+    image: "https://mateus-zdebski.github.io/imagens/igreja.png",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    github: "https://github.com/Mateus-Zdebski/igreja_sao_nicolau_html_css",
+    demo: "https://saonicolau.joinville.br/"
   },
   {
-    title: "Social Media Dashboard",
-    description: "Dashboard analítico para redes sociais com métricas em tempo real, gráficos interativos, agendamento de posts e relatórios detalhados.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-    tags: ["Next.js", "GraphQL", "MongoDB", "Chart.js"],
-    github: "#",
-    demo: "#"
+    title: "Loja de Veículos",
+    description: "Sistema para gerenciamento de vendas e estoque de uma loja de veículos.",
+    image: "https://mateus-zdebski.github.io/imagens/senaiultimoprojeto.png",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "MySQL"],
+    github: "https://github.com/Mateus-Zdebski/LojaVeiculos",
+    demo: "https://github.com/Mateus-Zdebski/LojaVeiculos"
   },
   {
-    title: "AI Chat Assistant",
-    description: "Assistente virtual com IA para atendimento ao cliente, integração com múltiplos canais, análise de sentimentos e respostas automatizadas.",
-    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=500&fit=crop",
-    tags: ["Python", "OpenAI", "React", "WebSocket"],
-    github: "#",
-    demo: "#"
-  },
-  {
-    title: "Fitness Tracker",
-    description: "App de fitness com acompanhamento de exercícios, planos de treino personalizados, métricas de saúde e gamificação de objetivos.",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=500&fit=crop",
-    tags: ["React Native", "Node.js", "Redis", "Charts"],
-    github: "#",
-    demo: "#"
-  },
-  {
-    title: "Crypto Portfolio",
-    description: "Gerenciador de portfólio de criptomoedas com dados em tempo real, alertas de preço, análise de mercado e histórico de transações.",
-    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=500&fit=crop",
-    tags: ["Vue.js", "Express", "CoinGecko API", "D3.js"],
-    github: "#",
-    demo: "#"
+    title: "Loja de Veículo Motob",
+    description: "Sistema para gerenciamento de vendas e estoque de uma loja de veículos (em construção).",
+    image: "https://mateus-zdebski.github.io/imagens/Motob%20-%20Car%20Dealer%20And%20Automotive%20HTML5%20Template%20-%20Brave%2011_03_2025%2014_06_20.png",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap", "MySQL"],
+    github: "https://github.com/Mateus-Zdebski",
+    demo: "https://motob.byethost12.com/"
   }
 ];
 

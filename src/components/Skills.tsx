@@ -3,38 +3,38 @@ import { Code, Database, Layout, Server, Smartphone, Zap } from "lucide-react";
 const skills = [
   {
     icon: <Code className="w-8 h-8" />,
-    name: "JavaScript/TypeScript",
-    description: "Desenvolvimento moderno com ES6+, TypeScript e frameworks como React, Vue e Node.js",
+    name: "HTML/CSS",
+    description: "Desenvolvimento de interfaces web responsivas e modernas",
     color: "from-primary to-secondary"
   },
   {
     icon: <Layout className="w-8 h-8" />,
-    name: "React & Next.js",
-    description: "Criação de interfaces interativas e aplicações SSR/SSG de alta performance",
+    name: "JavaScript",
+    description: "Desenvolvimento de funcionalidades interativas para aplicações web",
     color: "from-secondary to-accent"
   },
   {
     icon: <Server className="w-8 h-8" />,
-    name: "Node.js & APIs",
-    description: "Backend robusto com Express, NestJS e criação de APIs RESTful e GraphQL",
+    name: "PHP",
+    description: "Desenvolvimento de aplicações e sistemas para web",
     color: "from-accent to-primary"
   },
   {
     icon: <Database className="w-8 h-8" />,
-    name: "Banco de Dados",
-    description: "SQL e NoSQL - PostgreSQL, MongoDB, Redis para soluções escaláveis",
+    name: "MySQL",
+    description: "Gerenciamento e manipulação de banco de dados",
     color: "from-primary to-accent"
   },
   {
-    icon: <Smartphone className="w-8 h-8" />,
-    name: "Design Responsivo",
-    description: "UI/UX responsivo com Tailwind CSS, mobile-first e acessibilidade",
+    icon: <Code className="w-8 h-8" />,
+    name: "Java",
+    description: "Desenvolvimento de aplicações desktop e servidores",
     color: "from-secondary to-primary"
   },
   {
     icon: <Zap className="w-8 h-8" />,
-    name: "DevOps & Cloud",
-    description: "Docker, CI/CD, AWS, Vercel para deployment e infraestrutura moderna",
+    name: "Arduino",
+    description: "Projetos de eletrônica e automação com microcontroladores",
     color: "from-accent to-secondary"
   }
 ];

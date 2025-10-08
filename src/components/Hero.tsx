@@ -12,15 +12,15 @@ export const Hero = () => {
       <div className="text-center z-10 space-y-8 animate-slide-up">
         <div className="space-y-4">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold neon-text">
-            Seu Nome
+            Mateus Zdebski
           </h1>
           <div className="text-xl md:text-2xl lg:text-3xl font-light text-secondary">
-            Full Stack Developer
+            Desenvolvedor Web & Estudando Técnico em Eletroeletrônica
           </div>
         </div>
         
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Desenvolvedor apaixonado por criar experiências digitais únicas e inovadoras
+          Combinando conhecimentos em desenvolvimento web e eletrônica para criar soluções tecnológicas criativas
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
