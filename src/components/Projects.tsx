@@ -1,5 +1,12 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const projects = [
   {
@@ -44,68 +51,79 @@ export const Projects = () => {
           Meus Projetos
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="glass-card overflow-hidden cyber-border group hover:scale-105 transition-all duration-300"
-            >
-              <div className="relative overflow-hidden aspect-video">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
-              </div>
-              
-              <div className="p-6 space-y-4">
-                <h3 className="text-xl md:text-2xl font-bold text-secondary">
-                  {project.title}
-                </h3>
-                
-                <p className="text-foreground/70 text-sm md:text-base leading-relaxed line-clamp-3">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 text-xs md:text-sm bg-primary/20 text-primary border border-primary/30 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-6xl mx-auto"
+        >
+          <CarouselContent>
+            {projects.map((project, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                <div className="p-2">
+                  <div className="glass-card overflow-hidden cyber-border group hover:scale-105 transition-all duration-300 h-full flex flex-col">
+                    <div className="relative overflow-hidden aspect-video">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
+                    </div>
+                    
+                    <div className="p-6 space-y-4 flex-1 flex flex-col">
+                      <h3 className="text-xl md:text-2xl font-bold text-secondary">
+                        {project.title}
+                      </h3>
+                      
+                      <p className="text-foreground/70 text-sm md:text-base leading-relaxed line-clamp-3">
+                        {project.description}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag, i) => (
+                          <span
+                            key={i}
+                            className="px-3 py-1 text-xs md:text-sm bg-primary/20 text-primary border border-primary/30 rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <div className="flex gap-3 pt-4 mt-auto">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 border-secondary text-secondary hover:bg-secondary/10"
+                          asChild
+                        >
+                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4 mr-2" />
+                            Code
+                          </a>
+                        </Button>
+                        <Button
+                          size="sm"
+                          className="flex-1 bg-accent hover:bg-accent/80 text-accent-foreground"
+                          asChild
+                        >
+                          <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Demo
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                <div className="flex gap-3 pt-4">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="flex-1 border-secondary text-secondary hover:bg-secondary/10"
-                    asChild
-                  >
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button
-                    size="sm"
-                    className="flex-1 bg-accent hover:bg-accent/80 text-accent-foreground"
-                    asChild
-                  >
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
       </div>
     </section>
   );
