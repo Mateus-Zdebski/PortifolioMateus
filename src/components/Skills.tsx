@@ -1,4 +1,11 @@
-import { Code, Database, Layout, Server, Smartphone, Zap } from "lucide-react";
+import { Code, Database, Layout, Server, Zap } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const skills = [
   {
@@ -47,29 +54,39 @@ export const Skills = () => {
           Skills & Tecnologias
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="glass-card p-6 md:p-8 cyber-border group hover:scale-105 transition-transform duration-300"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className={`inline-block p-3 rounded-lg bg-gradient-to-br ${skill.color} mb-4 group-hover:animate-pulse`}>
-                {skill.icon}
-              </div>
-              
-              <h3 className="text-xl md:text-2xl font-bold text-secondary mb-3">
-                {skill.name}
-              </h3>
-              
-              <p className="text-foreground/70 leading-relaxed">
-                {skill.description}
-              </p>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-6xl mx-auto"
+        >
+          <CarouselContent>
+            {skills.map((skill, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-2">
+                  <div className="glass-card p-6 md:p-8 cyber-border group hover:scale-105 transition-transform duration-300 h-full">
+                    <div className={`inline-block p-3 rounded-lg bg-gradient-to-br ${skill.color} mb-4 group-hover:animate-pulse`}>
+                      {skill.icon}
+                    </div>
+                    
+                    <h3 className="text-xl md:text-2xl font-bold text-secondary mb-3">
+                      {skill.name}
+                    </h3>
+                    
+                    <p className="text-foreground/70 leading-relaxed">
+                      {skill.description}
+                    </p>
 
-              <div className="mt-4 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-          ))}
-        </div>
+                    <div className="mt-4 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
       </div>
     </section>
   );
