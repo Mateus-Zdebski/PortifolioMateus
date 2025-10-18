@@ -1,4 +1,4 @@
-import { User } from "lucide-react";
+import profileImage from "@/assets/profile.png";
 
 export const About = () => {
   return (
@@ -12,9 +12,11 @@ export const About = () => {
           {/* Profile Image */}
           <div className="flex justify-center mb-8">
             <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary shadow-[0_0_30px_rgba(139,92,246,0.5)] group">
-              <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <User className="w-24 h-24 text-primary" />
-              </div>
+              <img 
+                src={profileImage} 
+                alt="Profile" 
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           </div>
