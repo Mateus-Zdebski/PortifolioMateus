@@ -62,8 +62,8 @@ export const Projects = () => {
             {projects.map((project, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
                 <div className="p-2">
-                  <div className="glass-card overflow-hidden cyber-border group hover:scale-105 transition-all duration-300 h-full flex flex-col">
-                    <div className="relative overflow-hidden aspect-video">
+                  <div className="glass-card overflow-hidden cyber-border group hover:scale-105 transition-all duration-300 h-full flex flex-col pointer-events-auto">
+                    <div className="relative overflow-hidden aspect-video pointer-events-none">
                       <img 
                         src={project.image} 
                         alt={project.title}
@@ -92,24 +92,24 @@ export const Projects = () => {
                         ))}
                       </div>
                       
-                      <div className="flex gap-3 pt-4 mt-auto">
+                      <div className="flex gap-3 pt-4 mt-auto pointer-events-auto relative z-10">
                         <Button
                           size="sm"
                           variant="outline"
-                          className="flex-1 border-secondary text-secondary hover:bg-secondary/10"
+                          className="flex-1 border-secondary text-secondary hover:bg-secondary/10 pointer-events-auto cursor-pointer"
                           asChild
                         >
-                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="pointer-events-auto">
                             <Github className="w-4 h-4 mr-2" />
                             Code
                           </a>
                         </Button>
                         <Button
                           size="sm"
-                          className="flex-1 bg-accent hover:bg-accent/80 text-accent-foreground"
+                          className="flex-1 bg-accent hover:bg-accent/80 text-accent-foreground pointer-events-auto cursor-pointer"
                           asChild
                         >
-                          <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                          <a href={project.demo} target="_blank" rel="noopener noreferrer" className="pointer-events-auto">
                             <ExternalLink className="w-4 h-4 mr-2" />
                             Demo
                           </a>
